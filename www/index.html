@@ -13,15 +13,22 @@
                 const url = 'https://knight9999.github.io/cordova-autocomplete-sample/';
                 cordova.InAppBrowser.open(url, "_blank", "location=no");
             }
+            function submit1() {
+                const input = document.querySelector("#input");
+                const dom = document.querySelector("#result1");
+                dom.innerHTML = `入力されたのは${input.value}です`
+            }
         </script>
     </head>
     <body>
         <br><br>
         <h2>Cordova上でのテスト</h2>
         <br>
-        <input type="text" inputmode="numeric" autocomplete="one-time-code" />
+        <input id="input" type="text" inputmode="numeric" autocomplete="one-time-code" />
         <br>
-        <button>送信</button>
+        <button onClick="submit1()">送信</button>
+        <br>
+        <div id="result1"></div>
         <br><br><br>
         <h2>InAppBrowser上でのテスト</h2>
         <br>
