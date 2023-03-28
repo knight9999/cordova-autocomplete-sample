@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <title>Hello World</title>
+        <script src="cordova.js"></script>
+        <script>
+            function open1() {
+                const url = 'http://techmobile.punyu.jp/SMSsample.html';
+                cordova.InAppBrowser.open(url, "_blank", "location=no");
+            }
+        </script>
+    </head>
+    <body>
+        <br><br>
+        <h2>SMS自動入力補完テスト</h2>
+        <br>
+        <input type="text" inputmode="numeric" autocomplete="one-time-code" />
+        <br>
+        <button>送信</button>
+        <br><br><br>
+        <button onclick="open1()">外部ページOpen</button>
+    </body>
+</html>
